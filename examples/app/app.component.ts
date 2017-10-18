@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  
+  public list: any[] = [
+    {
+      name: 'Reference list',
+      id: 'ref-list', 
+      route: 'ref-list'
+    }
+  ];
+
+  public listIndex: number = 0;
+
+  public onListItemIndexChanged(index: number) {
+    this.listIndex - index;
+
+  }
+
 }

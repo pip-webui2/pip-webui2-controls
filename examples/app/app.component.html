@@ -1,1 +1,7 @@
-<pip-test [text]="'This is a test'"></pip-test>
+<div fxLayout="row" class="content">
+    <examples-list [list]="list" [selectedItemIndex]="listIndex" (selectedItemIdChange)="onListItemIndexChanged($event)">
+    </examples-list>
+    <div fxFlex="grow">
+        <router-outlet></router-outlet>
+    </div>
+</div>
