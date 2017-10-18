@@ -6,12 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  
+
   public list: any[] = [
     {
       name: 'Reference list',
-      id: 'ref-list', 
+      id: 'ref-list',
       route: 'ref-list'
+    },
+    {
+      name: 'Check list',
+      id: 'check-list',
+      route: 'check-list'
     }
   ];
 
