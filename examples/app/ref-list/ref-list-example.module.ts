@@ -6,7 +6,7 @@ import { MatButtonModule, MatInputModule } from '@angular/material';
 
 import { RefListExampleComponent } from './ref-list-example.component';
 
-
+import { PipRefListModule } from '../pip-webui2-controls';
 
 
 @NgModule({
@@ -19,8 +19,9 @@ import { RefListExampleComponent } from './ref-list-example.component';
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
-    MatInputModule
-
+    MatInputModule,
+    
+    PipRefListModule
   ],
   exports: [
     RefListExampleComponent
