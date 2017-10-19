@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 
 import { BrowserModule } from '@angular/platform-browser';
-import { MatButtonToggleModule } from '@angular/material';
+import { MatButtonModule, MatIconModule } from '@angular/material';
 
 import { PipColorPickerComponent } from './color-picker.component';
 
@@ -11,7 +11,8 @@ import { PipColorPickerComponent } from './color-picker.component';
   ],
   imports: [
     BrowserModule,
-    MatButtonToggleModule
+    MatButtonModule,
+    MatIconModule
   ],
   exports: [
     PipColorPickerComponent

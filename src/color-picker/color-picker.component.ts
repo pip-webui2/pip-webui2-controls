@@ -17,10 +17,10 @@ export class PipColorPickerComponent implements OnInit, AfterContentInit  {
 	@Input() public colors: string[] = DEFAULT_COLORS;
 	@Output() public changeColor = new EventEmitter();
 	
-	private _selectedIndex$: BehaviorSubject<number>;
+	private _selectedIndex$ = new BehaviorSubject<number>(0);
 		
 	ngOnInit() { 
-		this._selectedIndex$.next(this.colors.indexOf(this.selected));
+		
 	}
 
 	ngAfterContentInit() {
@@ -30,6 +30,8 @@ export class PipColorPickerComponent implements OnInit, AfterContentInit  {
 			this.focus();
 			this.changeColor.emit(this.selected);
 		});
+
+		this._selectedIndex$.next(this.colors.indexOf(this.selected));
 	}
 
 	private focus() {
