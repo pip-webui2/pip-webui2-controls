@@ -3,11 +3,11 @@ import { MatListModule } from '@angular/material';
 import { CommonModule } from '@angular/common';  
 import { BrowserModule } from '@angular/platform-browser';
 
-import { PipRefListComponent } from './ref-list.component';
+import { PipRefItemComponent } from './ref-item.component';
 
 @NgModule({
   declarations: [
-    PipRefListComponent
+    PipRefItemComponent
   ],
   imports: [
     MatListModule,
@@ -15,8 +15,8 @@ import { PipRefListComponent } from './ref-list.component';
     BrowserModule
   ],
   exports: [
-    PipRefListComponent
+    PipRefItemComponent
   ],
   providers: [],
 })
-export class PipRefListModule { }
+export class PipRefItemModule { }
