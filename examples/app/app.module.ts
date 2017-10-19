@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule} from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-import { PipTestModule } from './pip-webui2-controls';
-
 import { AppComponent } from './app.component';
 import { ExampleListModule } from './examples-list/examples-list.module';
 
@@ -37,8 +35,6 @@ const appRoutes: Routes = [
     CheckListExampleModule,
     ColorPickerExampleModule,
 
-    PipTestModule,
-    
     RouterModule.forRoot(appRoutes, { useHash: true })
   ],
   providers: [],
