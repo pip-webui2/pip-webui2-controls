@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
-import { MatListModule } from '@angular/material';
+import { MatListModule, MatIconModule } from '@angular/material';
 import { CommonModule } from '@angular/common';  
 import { BrowserModule } from '@angular/platform-browser';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { PipRefItemComponent } from './ref-item.component';
 
@@ -11,8 +12,10 @@ import { PipRefItemComponent } from './ref-item.component';
   ],
   imports: [
     MatListModule,
+    MatIconModule,
     CommonModule,
-    BrowserModule
+    BrowserModule,
+    FlexLayoutModule
   ],
   exports: [
     PipRefItemComponent
