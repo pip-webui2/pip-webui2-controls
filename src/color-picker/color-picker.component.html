@@ -1,1 +1,3 @@
-<div class="color-picker"> Hello ColorPickerComponent! </div>
+<button mat-icon-button *ngFor="let color of colors; let i = index;" #colorButton (click)="clickColor(i)">
+    <mat-icon>{{ color == this.selected ? 'radio_button_checked' : 'radio_button_unchecked' }}</mat-icon>
+</button>
