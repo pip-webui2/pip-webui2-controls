@@ -25,6 +25,12 @@ export class RefListExampleComponent {
     tag: "tag"
   },
   {
+    title: "new title",
+    subtitle: "new subtitle",
+    img: "https://scontent.fiev6-1.fna.fbcdn.net/v/t1.0-1/c202.126.334.334/s160x160/21432939_1577920175601354_6854116912021829924_n.jpg?oh=9979e331b964c2593983a1ff7633ed09&oe=5A6FD064",
+    subtitleIcon: "face",
+  },
+  {
     title: "new title2",
     subtitle: "new subtitle2",
     img: "https://scontent.fiev6-1.fna.fbcdn.net/v/t1.0-1/p160x160/12974300_773161139503097_1314808927226864548_n.jpg?oh=a5810decc422069eff2a4e5eae0e4183&oe=5A742045",
