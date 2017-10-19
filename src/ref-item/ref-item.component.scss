@@ -31,7 +31,9 @@ $font-family:               Roboto, 'Helvetica Neue', sans-serif;
     }
 
     :host ::ng-deep .mat-list-item-content {
-        //align-items: flex-start !important;
+        align-items: flex-start !important;
+        padding: 8px 16px !important;
+        height: initial !important;
     }
     :host {
         display: block;
@@ -76,12 +78,6 @@ $font-family:               Roboto, 'Helvetica Neue', sans-serif;
           margin-top: 8px;
       }
 
-
-      .mat-3-line {
-          .pip-pic {
-            margin-top: 16px;
-        }
-      }
       .text-overflow {
         overflow:      hidden;
         text-overflow: ellipsis;
