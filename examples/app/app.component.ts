@@ -11,12 +11,17 @@ export class AppComponent {
     {
       name: 'Reference list',
       id: 'ref-list',
-      route: 'ref-list'
+      route: 'ref_list'
     },
     {
       name: 'Check list',
       id: 'check-list',
-      route: 'check-list'
+      route: 'check_list'
+    },
+    {
+      name: 'Color picker',
+      id: 'color-picker',
+      route: 'color_picker'
     }
   ];
 

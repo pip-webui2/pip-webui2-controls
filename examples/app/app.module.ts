@@ -14,9 +14,13 @@ import { RefListExampleComponent } from './ref-list/ref-list-example.component';
 import { CheckListExampleModule } from './check-list/check-list-example.module';
 import { CheckListExampleComponent } from './check-list/check-list-example.component'; 
 
+import { ColorPickerExampleModule } from './color-picker-example/color-picker-example.module';
+import { ColorPickerExampleComponent } from './color-picker-example/color-picker-example.component';
+
 const appRoutes: Routes = [
-  { path: 'ref-list', component: RefListExampleComponent },
-  { path: 'check-list', component: CheckListExampleComponent },
+  { path: 'ref_list', component: RefListExampleComponent },
+  { path: 'check_list', component: CheckListExampleComponent },
+  { path: 'color_picker', component: ColorPickerExampleComponent },
   { path: '', pathMatch: 'full', redirectTo: 'ref-list' }
 ];
 
@@ -31,6 +35,7 @@ const appRoutes: Routes = [
     ExampleListModule,
     RefListExampleModule,
     CheckListExampleModule,
+    ColorPickerExampleModule,
 
     PipTestModule,
     
