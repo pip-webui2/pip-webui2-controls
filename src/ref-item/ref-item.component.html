@@ -1,36 +1,6 @@
-<!--<md-list-item class="pip-ref-list-item lp16 layout-row layout-align-start-start" md-ink-ripple>
-
-    <img src="images/ES_Timeline.svg" class="pip-pic">
-
-    <div class="pip-content">
-        <div class="layout-row layout-align-space-between-start">
-            <div class="flex">
-                <p class="pip-title">{{item.title}} </p>
-
-                <span class="pip-subtitle">
-                    {{item.time}}
-                </span>
-            </div>
-
-            <md-chip class="pip-type-chip pip-type-chip-right md-chip">
-                <div class="pip-text">INFO</div>
-            </md-chip>
-        </div>
-
-        <p class="pip-text-bold" ng-if="item.parent">{{item.parent}}</p>
-
-        <p class="pip-text" ng-if="item.parent">{{item.text}}</p>
-
-        <p class="pip-text-lg" ng-if="!item.parent">{{item.text}}</p>
-
-    </div>
-</md-list-item> -->
-
-
 <mat-list-item (click)="onSelect()">
-    <div class="pip-pic"  matListAvatar *ngIf="img">
-
-    <img matListAvatar [src]="img" [alt]="alt">
+    <div class="pip-pic" matListAvatar *ngIf="img">
+        <img matListAvatar [src]="img" [alt]="alt">
     </div>
     <div matLine class="pip-title text-overflow" *ngIf="title"> {{title}} </div>
     <p matLine class="pip-subtitle text-overflow" *ngIf="subtitle">
