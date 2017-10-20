@@ -1,21 +1,21 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { ColorPickerComponent } from './color-picker.component';
+import { PipColorPickerComponent } from './color-picker.component';
 
 describe('a color-picker component', () => {
-	let component: ColorPickerComponent;
+	let component: PipColorPickerComponent;
 
 	// register all needed dependencies
 	beforeEach(() => {
 		TestBed.configureTestingModule({
 			providers: [
-				ColorPickerComponent
+				PipColorPickerComponent
 			]
 		});
 	});
 
 	// instantiation through framework injection
-	beforeEach(inject([ColorPickerComponent], (ColorPickerComponent) => {
+	beforeEach(inject([PipColorPickerComponent], (ColorPickerComponent) => {
 		component = ColorPickerComponent;
 	}));
 
