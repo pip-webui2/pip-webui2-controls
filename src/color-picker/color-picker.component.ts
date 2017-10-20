@@ -19,19 +19,16 @@ export class PipColorPickerComponent implements OnInit, AfterContentInit  {
 	
 	private _selectedIndex$ = new BehaviorSubject<number>(0);
 		
-	ngOnInit() { 
-		
-	}
+	ngOnInit() { }
 
 	ngAfterContentInit() {
-		this.focus();
+		let i = this.colors.indexOf(this.selected);
+		this._selectedIndex$.next(i > -1 ? i : 0);
 		this.selectedIndex$.subscribe(index => {
 			this.selected = this.colors[index];
 			this.focus();
 			this.changeColor.emit(this.selected);
 		});
-
-		this._selectedIndex$.next(this.colors.indexOf(this.selected));
 	}
 
 	private focus() {
