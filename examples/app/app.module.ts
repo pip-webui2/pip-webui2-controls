@@ -15,11 +15,15 @@ import { CheckListExampleComponent } from './check-list/check-list-example.compo
 import { ColorPickerExampleModule } from './color-picker-example/color-picker-example.module';
 import { ColorPickerExampleComponent } from './color-picker-example/color-picker-example.component';
 
+import { EmptyStateExampleModule } from './empty-state-example/empty-state-example.module';
+import { EmptyStateExampleComponent } from './empty-state-example/empty-state-example.component';
+
 const appRoutes: Routes = [
   { path: 'ref_list', component: RefListExampleComponent },
   { path: 'check_list', component: CheckListExampleComponent },
   { path: 'color_picker', component: ColorPickerExampleComponent },
-  { path: '', pathMatch: 'full', redirectTo: 'ref-list' }
+  { path: 'empty_state', component: EmptyStateExampleComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'ref_list' }
 ];
 
 @NgModule({
@@ -34,6 +38,7 @@ const appRoutes: Routes = [
     RefListExampleModule,
     CheckListExampleModule,
     ColorPickerExampleModule,
+    EmptyStateExampleModule,
 
     RouterModule.forRoot(appRoutes, { useHash: true })
   ],

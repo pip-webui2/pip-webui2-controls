@@ -10,7 +10,7 @@ examples-list {
     right: 0;
 }
 
-::ng-deep color-picker-example {
+::ng-deep color-picker-example, ::ng-deep empty-state-example {
     flex: 1 1 100%;
     padding: 16px;
 }
