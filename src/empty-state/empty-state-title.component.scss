@@ -1,0 +1,36 @@
+:host {
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex-direction: column;
+    -moz-box-flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-grid-row-align: center;
+    align-items: center;
+    -webkit-align-content: center;
+    align-content: center;
+
+    .pip-pic {
+        max-width: 320px !important;
+        width: 80%;
+        margin: 25px 25px 0;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+    }
+
+    .pip-text {
+        max-width: 400px;
+        padding-left: 16px;
+        padding-right: 16px;
+        text-align: center;
+        font: normal 400 14px Roboto, "Helvetica Neue", sans-serif;
+        color: rgba(0, 0, 0, 0.38);
+    }
+}
