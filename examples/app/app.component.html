@@ -1,6 +1,17 @@
-<div class="content">
+<mat-sidenav-container  class="content">
     <mat-toolbar color="primary">
-        <span>Controls </span>
+        <span fxLayout="row" fxLayoutAlign="start center"  fxFlex="grow">
+            <span fxFlex="grow">Controls</span>
+            <mat-form-field>
+                    <mat-select
+                    [(ngModel)]="theme"
+                    (ngModelChange)="changeTheme($event)">
+                        <mat-option *ngFor="let theme of themes" [value]="theme" >
+                            {{theme}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+        </span>
     </mat-toolbar>
     <div fxLayout="row" style="height: calc(100% - 68px);">
         <examples-list [list]="list" [selectedItemIndex]="listIndex" (selectedItemIdChange)="onListItemIndexChanged($event)">
@@ -11,4 +22,4 @@
         </div>
     </div>
 
-</div>
+</mat-sidenav-container>

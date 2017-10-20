@@ -30,10 +30,7 @@ export class AppComponent {
   public themes: string[];
   public theme: string;
 
-  public onListItemIndexChanged(index: number) {
-    this.listIndex - index;
 
-  }
 
   public constructor(private service: PipThemesService) {
     this.themes = this.service.themes;
@@ -42,4 +39,13 @@ export class AppComponent {
 
   }
 
+  public changeTheme() {
+    console.log(this.theme);
+    this.service.selectedTheme = this.theme;
+  }
+  public onListItemIndexChanged(index: number) {
+    this.listIndex - index;
+
+  }
+  
 }

@@ -16,3 +16,7 @@ examples-list {
     flex: 1 1 100%;
     padding: 16px;
 }
+
+::ng-deep .mat-toolbar .mat-select-value {
+    color: #fff !important;
+}
