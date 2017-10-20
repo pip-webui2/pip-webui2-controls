@@ -1,22 +1,22 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { EmptyStateComponent } from './empty-state.component';
+import { PipEmptyStateComponent } from './empty-state.component';
 
 describe('a empty-state component', () => {
-	let component: EmptyStateComponent;
+	let component: PipEmptyStateComponent;
 
 	// register all needed dependencies
 	beforeEach(() => {
 		TestBed.configureTestingModule({
 			providers: [
-				EmptyStateComponent
+				PipEmptyStateComponent
 			]
 		});
 	});
 
 	// instantiation through framework injection
-	beforeEach(inject([EmptyStateComponent], (EmptyStateComponent) => {
-		component = EmptyStateComponent;
+	beforeEach(inject([PipEmptyStateComponent], (PipEmptyStateComponent) => {
+		component = PipEmptyStateComponent;
 	}));
 
 	it('should have an instance', () => {
