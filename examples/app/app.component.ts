@@ -23,6 +23,11 @@ export class AppComponent {
       name: 'Color picker',
       id: 'color-picker',
       route: 'color_picker'
+    },
+    {
+      name: 'Empty state',
+      id: 'empty-state',
+      route: 'empty_state'
     }
   ];
 
