@@ -1,7 +1,14 @@
-<div fxLayout="row" class="content">
-    <examples-list [list]="list" [selectedItemIndex]="listIndex" (selectedItemIdChange)="onListItemIndexChanged($event)">
-    </examples-list>
-    <div fxFlex="grow" fxLayout="column" style="width: calc(100% - 300px);">
-        <router-outlet></router-outlet>
+<div class="content">
+    <mat-toolbar color="primary">
+        <span>Controls </span>
+    </mat-toolbar>
+    <div fxLayout="row" style="height: calc(100% - 68px);">
+        <examples-list [list]="list" [selectedItemIndex]="listIndex" (selectedItemIdChange)="onListItemIndexChanged($event)">
+        </examples-list>
+        <div fxFlex="grow" style="width: calc(100% - 300px); 
+                        overflow: auto">
+            <router-outlet></router-outlet>
+        </div>
     </div>
+
 </div>
