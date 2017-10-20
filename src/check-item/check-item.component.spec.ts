@@ -1,20 +1,25 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, inject } from '@angular/core/testing';
 
 import { PipCheckItemComponent } from './check-item.component';
 
-describe('PipCheckItemComponent', () => {
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        PipCheckItemComponent
-      ],
-    }).compileComponents();
-  }));
+describe('a pip-ref-item component', () => {
+	let component: PipCheckItemComponent;
 
-  it('should create the component', async(() => {
-    const fixture = TestBed.createComponent(PipCheckItemComponent);
-    const component = fixture.debugElement.componentInstance;
-    expect(component).toBeTruthy();
-  }));
+	// register all needed dependencies
+	beforeEach(() => {
+		TestBed.configureTestingModule({
+			providers: [
+				PipCheckItemComponent
+			]
+		});
+	});
 
+	// instantiation through framework injection
+	beforeEach(inject([PipCheckItemComponent], (PipCheckItemComponent) => {
+		component = PipCheckItemComponent;
+	}));
+
+	it('should have an instance', () => {
+		expect(component).toBeDefined();
+	});
 });
