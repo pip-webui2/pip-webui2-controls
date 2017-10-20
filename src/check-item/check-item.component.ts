@@ -23,7 +23,9 @@ export class PipCheckItemComponent {
         this.select.emit(this.id);
     }
 
-    public onCheck() {
+    public onCheck($event: boolean) {
+        this.checked = $event;
         this.check.emit(this.id);
     }
+
 }

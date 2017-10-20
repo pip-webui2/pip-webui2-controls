@@ -1,6 +1,6 @@
 <mat-list-item (click)="onSelect()">
     <div class="pip-pic" matListAvatar>
-        <mat-checkbox  [(ngModel)]="checked" (ngModelChange)="onCheck($event)"></mat-checkbox>
+        <mat-checkbox  [ngModel]="checked" (ngModelChange)="onCheck($event)" (click)="$event.stopPropagation()"></mat-checkbox>
     </div>
     <div matLine class="pip-title text-overflow" *ngIf="title"> {{title}} </div>
     <p matLine class="pip-subtitle text-overflow" *ngIf="subtitle">
