@@ -1,3 +1,4 @@
-export * from './ref-item/index';
-export * from './color-picker/index';
-export * from './empty-state/index';
+export * from './ref-item';
+export * from './check-item';
+export * from './color-picker';
+export * from './empty-state';

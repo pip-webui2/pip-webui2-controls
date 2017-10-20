@@ -6,6 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./ref-item.component.scss']
 })
 export class PipRefItemComponent {
+    @Input()  id: string;
     @Input()  img: string;
     @Input()  title: string;
     @Input()  subtitle: string;
@@ -20,7 +21,6 @@ export class PipRefItemComponent {
     public constructor() {}
 
     public onSelect() {
-        console.log('aaa');
-        this.select.emit();
+        this.select.emit(this.id);
     }
 }
