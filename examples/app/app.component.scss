@@ -9,3 +9,8 @@ examples-list {
     bottom: 0;
     right: 0;
 }
+
+::ng-deep color-picker-example {
+    flex: 1 1 100%;
+    padding: 16px;
+}

@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ColorPickerExampleComponent implements OnInit {
+	public colors: string[] = ['green', 'black', 'red', 'yellow', 'cyan', 'grey'];
+	public color: string = 'red';	
+	public colorChanged: Function = (color) => {
+		this.color = color;
+	}
 
 	ngOnInit() { }
 }
