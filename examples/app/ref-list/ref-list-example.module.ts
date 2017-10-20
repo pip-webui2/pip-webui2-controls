@@ -6,7 +6,7 @@ import { MatButtonModule, MatInputModule, MatListModule } from '@angular/materia
 
 import { RefListExampleComponent } from './ref-list-example.component';
 
-import { PipRefListModule, PipRefItemModule } from '../pip-webui2-controls';
+import { PipRefItemModule } from '../pip-webui2-controls';
 
 
 @NgModule({
@@ -22,7 +22,6 @@ import { PipRefListModule, PipRefItemModule } from '../pip-webui2-controls';
     MatInputModule,
     MatListModule,
 
-    PipRefListModule,
     PipRefItemModule
   ],
   exports: [
