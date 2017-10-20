@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PipThemesService } from 'pip-webui2-themes';
 
 @Component({
   selector: 'app-root',
@@ -31,9 +32,18 @@ export class AppComponent {
   ];
 
   public listIndex: number = 0;
+  public themes: string[];
+  public theme: string;
 
   public onListItemIndexChanged(index: number) {
     this.listIndex - index;
+
+  }
+
+  public constructor(private service: PipThemesService) {
+    this.themes = this.service.themes;
+
+    this.theme = this.service.selectedTheme;
 
   }
 

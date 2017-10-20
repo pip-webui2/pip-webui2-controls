@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule} from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatToolbarModule } from '@angular/material';
+import { PipThemesModule } from 'pip-webui2-themes';
 
 import { AppComponent } from './app.component';
 import { ExampleListModule } from './examples-list/examples-list.module';
@@ -33,6 +35,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FlexLayoutModule,
+    MatToolbarModule,
+    PipThemesModule,
 
     ExampleListModule,
     RefListExampleModule,
