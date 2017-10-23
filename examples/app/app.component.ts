@@ -47,7 +47,6 @@ export class AppComponent implements AfterViewInit {
 		public media: ObservableMedia) {
 
     this.themes = this.service.themes;
-
     this.theme = this.service.selectedTheme;
 
     media.subscribe((change: MediaChange) => {
@@ -66,9 +65,11 @@ export class AppComponent implements AfterViewInit {
   }
 
   public onListItemIndexChanged(index: number) {
-    this.listIndex - index;
+    
+    console.log(this.listIndex, index);
+    this.listIndex = index;
+    console.log(this.listIndex);
     this.sidenav.close();
-
   }
   
 }
