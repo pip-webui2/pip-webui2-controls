@@ -1,5 +1,6 @@
+<p> <b>Reference list</b> is a list filled with Reference items.</p>
 
-        <mat-nav-list>
-                <pip-ref-item *ngFor="let shoe of typesOfShoes" [id]="shoe.id" [title]="shoe.title" [subtitle]="shoe.subtitle" [subtitleIcon]="shoe.subtitleIcon"
-                        [img]="shoe.img" [textBold]="shoe.textBold" [text]="shoe.text" [tag]="shoe.tag" (select)="select($event)"></pip-ref-item>
-        </mat-nav-list>
+<mat-nav-list>
+        <pip-ref-item *ngFor="let shoe of typesOfShoes" [id]="shoe.id" [title]="shoe.title" [subtitle]="shoe.subtitle" [subtitleIcon]="shoe.subtitleIcon"
+                [img]="shoe.img" [textBold]="shoe.textBold" [text]="shoe.text" [tag]="shoe.tag" (select)="select($event)"></pip-ref-item>
+</mat-nav-list>
