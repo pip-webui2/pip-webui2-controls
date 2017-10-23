@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule} from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatToolbarModule, MatSelectModule, MatSidenavModule, MatIconModule } from '@angular/material';
+import { MatToolbarModule, MatSelectModule, MatSidenavModule, MatIconModule,MatButtonModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { PipThemesModule } from 'pip-webui2-themes';
@@ -43,6 +43,7 @@ const appRoutes: Routes = [
     MatSelectModule,
     MatIconModule,
     MatSidenavModule,
+    MatButtonModule,
     PipThemesModule,
 
     ExampleListModule,

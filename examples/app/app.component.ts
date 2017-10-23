@@ -2,7 +2,7 @@ import { Component, OnInit, AfterViewInit,  ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material';
 import { PipThemesService } from 'pip-webui2-themes';
 import { ObservableMedia, MediaChange } from "@angular/flex-layout";
-
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -40,9 +40,11 @@ export class AppComponent implements AfterViewInit {
   public activeMediaQuery: boolean;
   public mode: string;
   public app: string = 'Controls';
+  public url: string;
   @ViewChild('sidenav') sidenav: MatSidenav;
 
   public constructor(
+    private router: Router,
     private service: PipThemesService,
 		public media: ObservableMedia) {
 
@@ -54,10 +56,22 @@ export class AppComponent implements AfterViewInit {
       this.mode = change && change.mqAlias == 'xs'? null : 'side';
     })
 
+    router.events.subscribe((url:any) => {
+    
+      if (url.url && url.url != this.url) {
+        this.url = url.url;
+        this.listIndex = this.list.findIndex((item) => {
+            return "/" + item.route == this.url;
+        })
+      }
+    });
+
+  }
+
+  public ngOnInit() {
   }
 
   public ngAfterViewInit() {
-
   }
 
   public changeTheme() {

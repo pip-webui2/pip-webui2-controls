@@ -6,7 +6,9 @@
 
     <mat-toolbar color="primary" class="mat-elevation-z6">
         <span fxLayout="row" fxLayoutAlign="start center" fxFlex="grow">
-            <mat-icon *ngIf="activeMediaQuery"  (click)="sidenav.open()">reorder</mat-icon>
+            <button mat-icon-button *ngIf="activeMediaQuery" >
+                <mat-icon (click)="sidenav.open()">reorder</mat-icon>
+            </button>
             <span fxFlex="grow">{{app}}</span>
         <mat-form-field *ngIf="!activeMediaQuery">
             <mat-select [(ngModel)]="theme" (ngModelChange)="changeTheme($event)">
@@ -17,6 +19,7 @@
         </mat-form-field>
         </span>
     </mat-toolbar>
+
     <div fxLayout="row" style="height: calc(100% - 68px);">
         <examples-list *ngIf="!activeMediaQuery" class="mat-elevation-z6" [list]="list" [selectedItemIndex]="listIndex" (selectedItemIndexChange)="onListItemIndexChanged($event)">
         </examples-list>
@@ -28,8 +31,8 @@
                 </span>
             </mat-toolbar>
             <div class="router">
-                
-            <router-outlet></router-outlet>
+
+                <router-outlet></router-outlet>
             </div>
         </div>
     </div>
