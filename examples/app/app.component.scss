@@ -28,3 +28,8 @@ examples-list {
     padding: 16px;
     font-family: Roboto;
 }
+
+.example-appbar {
+    z-index: 10;
+    position: relative;
+}
