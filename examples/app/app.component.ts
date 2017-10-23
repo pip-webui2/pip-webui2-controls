@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterViewInit,  ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material';
 import { PipThemesService } from 'pip-webui2-themes';
+import { ObservableMedia, MediaChange } from "@angular/flex-layout";
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
 
   public list: any[] = [
     {
@@ -34,22 +37,37 @@ export class AppComponent {
   public listIndex: number = 0;
   public themes: string[];
   public theme: string;
+  public activeMediaQuery: boolean;
+  public mode: string;
+  public app: string = 'Controls';
+  @ViewChild('sidenav') sidenav: MatSidenav;
 
+  public constructor(
+    private service: PipThemesService,
+		public media: ObservableMedia) {
 
-
-  public constructor(private service: PipThemesService) {
     this.themes = this.service.themes;
 
     this.theme = this.service.selectedTheme;
 
+    media.subscribe((change: MediaChange) => {
+      this.activeMediaQuery = change && change.mqAlias == 'xs'? true : false;
+      this.mode = change && change.mqAlias == 'xs'? null : 'side';
+    })
+
+  }
+
+  public ngAfterViewInit() {
+
   }
 
   public changeTheme() {
-    console.log(this.theme);
     this.service.selectedTheme = this.theme;
   }
+
   public onListItemIndexChanged(index: number) {
     this.listIndex - index;
+    this.sidenav.close();
 
   }
   

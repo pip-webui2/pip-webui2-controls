@@ -1,20 +1,24 @@
-<mat-sidenav-container  class="content">
+<mat-sidenav-container class="content">
+    <mat-sidenav #sidenav>
+        <examples-list [list]="list" [selectedItemIndex]="listIndex" (selectedItemIndexChange)="onListItemIndexChanged($event);">
+        </examples-list>
+    </mat-sidenav>
+
     <mat-toolbar color="primary">
-        <span fxLayout="row" fxLayoutAlign="start center"  fxFlex="grow">
-            <span fxFlex="grow">Controls</span>
-            <mat-form-field>
-                    <mat-select
-                    [(ngModel)]="theme"
-                    (ngModelChange)="changeTheme($event)">
-                        <mat-option *ngFor="let theme of themes" [value]="theme" >
-                            {{theme}}
-                        </mat-option>
-                    </mat-select>
-                </mat-form-field>
+        <span fxLayout="row" fxLayoutAlign="start center" fxFlex="grow">
+            <mat-icon *ngIf="activeMediaQuery"  (click)="sidenav.open()">reorder</mat-icon>
+            <span fxFlex="grow">{{app}}</span>
+            <mat-form-field *ngIf="!activeMediaQuery">
+                <mat-select [(ngModel)]="theme" (ngModelChange)="changeTheme($event)">
+                    <mat-option *ngFor="let theme of themes" [value]="theme">
+                        {{theme}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
         </span>
     </mat-toolbar>
     <div fxLayout="row" style="height: calc(100% - 68px);">
-        <examples-list [list]="list" [selectedItemIndex]="listIndex" (selectedItemIdChange)="onListItemIndexChanged($event)">
+        <examples-list *ngIf="!activeMediaQuery" [list]="list" [selectedItemIndex]="listIndex" (selectedItemIdChange)="onListItemIndexChanged($event)">
         </examples-list>
         <div fxFlex="grow" style="width: calc(100% - 300px); 
                         overflow: auto">
