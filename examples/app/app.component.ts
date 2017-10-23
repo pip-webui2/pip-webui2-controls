@@ -1,8 +1,9 @@
 import { Component, OnInit, AfterViewInit,  ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material';
-import { PipThemesService } from 'pip-webui2-themes';
 import { ObservableMedia, MediaChange } from "@angular/flex-layout";
 import { Router } from "@angular/router";
+import { PipThemesService } from 'pip-webui2-themes';
+import { ExmapleListItem } from "./examples-list/shared/examples-list.model";
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ import { Router } from "@angular/router";
 })
 export class AppComponent implements AfterViewInit {
 
-  public list: any[] = [
+  public list:  ExmapleListItem[] = [
     {
       name: 'Reference list',
       id: 'ref-list',
@@ -68,11 +69,9 @@ export class AppComponent implements AfterViewInit {
 
   }
 
-  public ngOnInit() {
-  }
+  public ngOnInit() {}
 
-  public ngAfterViewInit() {
-  }
+  public ngAfterViewInit() {}
 
   public changeTheme() {
     this.service.selectedTheme = this.theme;
