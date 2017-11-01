@@ -11,3 +11,7 @@ Pip.WebUI.Controls modules provides controls mix
 **Empty state** components show a placeholder for pages without data. It gives an explanation and provides one or few actions to get started.
 
 **Snackbar** services allows to show snackbars, formatted in different ways and presented in priority order. It ensures that one snackbar message will not hide another one, until timeout expires or users handles it.
+
+## <a name="license"></a>License
+
+This module is released under [MIT license](License) and totally free for commercial and non-commercial use.
