@@ -2,7 +2,7 @@ import { Component, OnInit, AfterViewInit,  ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material';
 import { ObservableMedia, MediaChange } from "@angular/flex-layout";
 import { Router } from "@angular/router";
-import { PipThemesService, ThemeModel } from 'pip-webui2-themes';
+import { PipThemesService, Theme } from 'pip-webui2-themes';
 import { ExmapleListItem } from "./examples-list/shared/examples-list.model";
 
 @Component({
@@ -54,8 +54,8 @@ export class AppComponent implements AfterViewInit {
   }
 
   public listIndex: number = 0;
-  public themes: ThemeModel[];
-  public theme: ThemeModel;
+  public themes: Theme[];
+  public theme: Theme;
   public activeMediaQuery: boolean;
   public mode: string;
   public app: string = 'Controls';
