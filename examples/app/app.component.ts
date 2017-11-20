@@ -76,13 +76,18 @@ export class AppComponent implements AfterViewInit {
     })
 
     router.events.subscribe((url:any) => {
-    
-      if (url.url && url.url != this.url) {
-        this.url = url.url;
-        this.listIndex = this.list.findIndex((item) => {
-            return "/" + item.route == this.url;
-        })
+      let index: number;
+      if (!url.url) {
+        this.listIndex = 0;
+        return;
       }
+      if (url.url != this.url) {
+        this.url = url.url;
+        index = this.list.findIndex((item) => {
+            return "/" + item.route == this.url;
+        });
+        this.listIndex = index == -1 ? 0: index; 
+      } 
     });
 
   }
@@ -97,9 +102,7 @@ export class AppComponent implements AfterViewInit {
 
   public onListItemIndexChanged(index: number) {
     
-    console.log(this.listIndex, index);
     this.listIndex = index;
-    console.log(this.listIndex);
     this.sidenav.close();
   }
   
