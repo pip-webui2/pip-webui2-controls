@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 
 import { PipPartService } from './shared/part.service';
-import { PipPartDirective } from './part.directive';
+import { PipPartVisibilityDirective } from './part-visibility.directive';
 
 @NgModule({
   declarations: [
-    PipPartDirective
+    PipPartVisibilityDirective
   ],
   imports: [
     
   ],
   exports: [  
-    PipPartDirective
+    PipPartVisibilityDirective
   ],
   providers: [
     PipPartService

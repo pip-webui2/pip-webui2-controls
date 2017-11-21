@@ -5,13 +5,14 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { MatCheckboxModule, MatCardModule, MatToolbarModule, MatButtonModule, MatIconModule } from '@angular/material';
 
 import { PartsExampleComponent } from './parts-example.component';
-
+import { PipPartDirective } from './parts-name-example.directive';
 import { PipPartModule } from '../pip-webui2-controls';
 
 
 @NgModule({
   declarations: [
-    PartsExampleComponent
+    PartsExampleComponent,
+    PipPartDirective
   ],
   imports: [
     BrowserModule,

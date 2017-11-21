@@ -1,9 +1,9 @@
 <mat-toolbar color="accent">
-    <div *pipPart="titlePartName">
+    <div *pipPartName="titlePartName">
         Hello! I am part!
     </div>
     <div fxFlex="grow"></div>
-    <div *pipPart="showButtons">
+    <div *pipPartVisibility="showButtons">
         <button mat-icon-button>
             <mat-icon>search</mat-icon>
         </button>
