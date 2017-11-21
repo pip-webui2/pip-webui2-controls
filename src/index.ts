@@ -1,4 +1,7 @@
-export * from './ref-item';
-export * from './check-item';
-export * from './color-picker';
-export * from './empty-state';
+// Dummy components
+export * from './ref-item/index';
+export * from './check-item/index';
+export * from './color-picker/index';
+export * from './empty-state/index';
+// Smart components including services
+export * from './part/index';

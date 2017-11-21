@@ -1,0 +1,23 @@
+<mat-toolbar color="accent">
+    <div *pipPart="titlePartName">
+        Hello! I am part!
+    </div>
+    <div fxFlex="grow"></div>
+    <div *pipPart="showButtons">
+        <button mat-icon-button>
+            <mat-icon>search</mat-icon>
+        </button>
+        <button mat-icon-button>
+            <mat-icon>more_vert</mat-icon>
+        </button>
+    </div>
+</mat-toolbar>
+
+<mat-card fxLayout="column">
+    <mat-checkbox [(ngModel)]="showTitle">
+        Show title (by service)
+    </mat-checkbox>
+    <mat-checkbox [(ngModel)]="showButtons" style="margin-top: 16px">
+        Show buttons (by attribute)
+    </mat-checkbox>
+</mat-card>

@@ -32,6 +32,11 @@ export class AppComponent implements AfterViewInit {
       name: 'Empty state',
       id: 'empty-state',
       route: 'empty_state'
+    },
+    {
+      name: 'Parts',
+      id: 'parts',
+      route: 'parts'
     }
   ];
 
