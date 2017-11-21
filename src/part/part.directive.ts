@@ -10,7 +10,7 @@ export class PipPartDirective {
     private isVisible: boolean = false;
     @Input() public set pipPart(part: any) {
         if (typeof part === 'string') {
-            this.subscription = this.service.updatePartByName(part, null, null).visible.subscribe(visible => {
+            this.subscription = this.service.changeVisibility(part, null).visible.subscribe(visible => {
                 this.updatevisibility(visible);
             });
         }

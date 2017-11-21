@@ -25,7 +25,7 @@ export class PartsExampleComponent implements OnInit {
 
 	ngOnInit() { 
         this._showTitle$.subscribe((isShown: boolean) => {
-            this.partService.updatePartByName(this.titlePartName, isShown);
+            this.partService.changeVisibility(this.titlePartName, isShown);
         });
     }
 
