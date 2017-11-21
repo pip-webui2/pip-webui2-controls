@@ -22,11 +22,10 @@ export class PipPartService {
         return this._parts;
     }
 
-    public addNewPartByName(name: string, visible: boolean, props: any = null): Part {
+    public addNewPartByName(name: string, visible: boolean): Part {
         let newPart: Part = new Part();
         newPart.name = name;
         newPart.visible = new BehaviorSubject<boolean>(visible);
-        newPart.properties = new BehaviorSubject<any>(props);
         this._parts ? this._parts.push(newPart) : this._parts = [newPart];
 
         return this._parts[this._parts.length - 1];
