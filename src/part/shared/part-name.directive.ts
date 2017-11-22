@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs/Subscription';
 export class PipPartNameDirective extends PipPartComponent {
     protected subscription: Subscription;
 
-    protected subscribeByName(name: string) {
+    protected subscribeVisibilityByName(name: string) {
         this.subscription = this.service.changeVisibility(name, null).visible.subscribe(visible => {
             this.updatevisibility(visible);
         });
