@@ -37,6 +37,11 @@ export class AppComponent implements AfterViewInit {
       name: 'Parts',
       id: 'parts',
       route: 'parts'
+    },
+    {
+      name: 'Jumbotron',
+      id: 'jumbotron',
+      route: 'jumbotron'
     }
   ];
 

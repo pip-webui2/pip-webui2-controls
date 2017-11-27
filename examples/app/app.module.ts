@@ -25,12 +25,16 @@ import { EmptyStateExampleComponent } from './empty-state-example/empty-state-ex
 import { PartsExampleModule } from './parts-example/parts-example.module';
 import { PartsExampleComponent } from './parts-example/parts-example.component';
 
+import { JumbotronExampleModule } from './jumbotron-example/jumbotron-example.module';
+import { JumbotronExampleComponent } from './jumbotron-example/jumbotron-example.component';
+
 const appRoutes: Routes = [
   { path: 'ref_list', component: RefListExampleComponent },
   { path: 'check_list', component: CheckListExampleComponent },
   { path: 'color_picker', component: ColorPickerExampleComponent },
   { path: 'empty_state', component: EmptyStateExampleComponent },
   { path: 'parts', component: PartsExampleComponent },
+  { path: 'jumbotron', component: JumbotronExampleComponent },
   { path: '', pathMatch: 'full', redirectTo: 'ref_list' }
 ];
 
@@ -56,6 +60,7 @@ const appRoutes: Routes = [
     ColorPickerExampleModule,
     EmptyStateExampleModule,
     PartsExampleModule,
+    JumbotronExampleModule,
 
     RouterModule.forRoot(appRoutes, { useHash: true })
   ],

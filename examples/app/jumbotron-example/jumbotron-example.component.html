@@ -1,0 +1,27 @@
+<p>Jumbotron</p>
+
+<div>
+    <pip-jumbotron>
+        <pip-jumbotron-picture src="assets/empty.svg" width="220px" height="240px"></pip-jumbotron-picture>
+        <pip-jumbotron-content title="Failed workflows" icon="chevron_right">
+            <!--div *ngFor="let item of items" class="pip-jumbo-item">
+                <div class="pip-jumbo-title">
+                    <span>ID: </span>
+                    <span class="text-overflow pip-jumbo-title-bold pip-jumbo-title-small">{{item.text1}}</span> •
+                    <span>POReceipt#:</span>
+                    <span class="flex pip-jumbo-title-bold">{{item.text2}}</span>
+                </div>
+                <div class="pip-jumbo-subtitle text-overflow" style="font-size: 14px">
+                    <span>Activities:</span>
+                    <span class="pip-jumbo-subtitle-bold">{{item.text3}}</span> •
+                    <span class="pip-jumbo-subtitle-bold">{{item.text4}}</span>
+                </div>
+
+            </div-->
+            <pip-jumbotron-item *ngFor="let item of items" [item]="item"></pip-jumbotron-item>
+        </pip-jumbotron-content>
+        <pip-jumbotron-content title="Failed workflows" icon="chevron_right">
+            <pip-jumbotron-item *ngFor="let item of items" [item]="item"></pip-jumbotron-item>
+        </pip-jumbotron-content>
+    </pip-jumbotron>
+</div>

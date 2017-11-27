@@ -1,0 +1,102 @@
+@import '~@angular/material/theming';
+@import '~pip-webui2-themes/src/styles.scss';
+@include mat-core();
+
+@mixin jumbotron-mixin($theme) {
+    $foreground: map-get($theme, foreground);
+    $background: map-get($theme, background);
+    :host.pip-jumbotron {
+        color: mat-color($foreground, text) !important;
+        background: mat-color($background, card);
+        /deep/.pip-jumbo-title-content,
+        /deep/.pip-jumbo-item {
+            border-bottom-color: mat-color($foreground, divider);
+        }
+    }
+}
+
+.unicorn-dark-theme {
+    @include jumbotron-mixin($dark-theme);
+}
+
+.candy-theme {
+    @include jumbotron-mixin($candy-app-theme);
+}
+
+.pip-blue-theme {
+    @include jumbotron-mixin($pip-blue-theme);
+}
+
+.pip-grey-theme {
+    @include jumbotron-mixin($pip-grey-theme);
+}
+
+.pip-navy-theme {
+    @include jumbotron-mixin($pip-navy-theme);
+}
+
+.pip-amber-theme {
+    @include jumbotron-mixin($pip-amber-theme);
+}
+
+.pip-green-theme {
+    @include jumbotron-mixin($pip-green-theme);
+}
+
+.pip-orange-theme {
+    @include jumbotron-mixin($pip-orange-theme);
+}
+
+.pip-pink-theme {
+    @include jumbotron-mixin($pip-pink-theme);
+}
+
+.pip-dark-theme {
+    @include jumbotron-mixin($pip-dark-theme);
+}
+
+.pip-black-theme {
+    @include jumbotron-mixin($pip-black-theme);
+}
+
+.bootbarn-warm-theme {
+    @include jumbotron-mixin($bootbarn-warm-theme);
+}
+
+.bootbarn-cool-theme {
+    @include jumbotron-mixin($bootbarn-cool-theme);
+}
+
+.bootbarn-mono-theme {
+    @include jumbotron-mixin($bootbarn-mono-theme);
+}
+
+$jumbotron-padding: 24px;
+$jumbotron-color: rgba(0, 0, 0, .87);
+$jumbotron-bg: rgba(0, 0, 0, 0.08);
+$border-radius: 2px;
+
+:host.pip-jumbotron {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-bottom: $jumbotron-padding;
+    color: $jumbotron-color;
+    background-color: $jumbotron-bg;
+    box-sizing: border-box;
+    max-height: 100%;
+    display: flex;
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+::ng-deep .pip-main-xs .pip-jumbotron, ::ng-deep .pip-main-sm .pip-jumbotron {
+    display: block;
+    flex-direction: column;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
