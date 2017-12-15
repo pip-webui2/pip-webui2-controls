@@ -1,0 +1,13 @@
+<pip-slider #slider>
+    <pip-slide *ngFor="let slide of slides; let i = index" fxLayout="column" fxLayoutAlign="center center">
+        <img height="100%" [src]="slide">
+    </pip-slide>
+    <pip-slider-button direction="backward" [disabled]="slider.isFirst"></pip-slider-button>
+    <pip-slider-button [disabled]="slider.isLast"></pip-slider-button>
+</pip-slider>
+<div>
+    <mat-tab-group [selectedIndex]="slider.slideIndex" (selectedIndexChange)="slider.toSlide($event)">
+        <mat-tab *ngFor="let slide of slides; let i = index" [label]="'Step ' + (i + 1)">
+        </mat-tab>
+    </mat-tab-group>
+</div>

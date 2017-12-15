@@ -28,6 +28,9 @@ import { PartsExampleComponent } from './parts-example/parts-example.component';
 import { JumbotronExampleModule } from './jumbotron-example/jumbotron-example.module';
 import { JumbotronExampleComponent } from './jumbotron-example/jumbotron-example.component';
 
+import { SliderExampleModule } from './slider-example/slider-example.module';
+import { SliderExampleComponent } from './slider-example/slider-example.component';
+
 const appRoutes: Routes = [
   { path: 'ref_list', component: RefListExampleComponent },
   { path: 'check_list', component: CheckListExampleComponent },
@@ -35,6 +38,7 @@ const appRoutes: Routes = [
   { path: 'empty_state', component: EmptyStateExampleComponent },
   { path: 'parts', component: PartsExampleComponent },
   { path: 'jumbotron', component: JumbotronExampleComponent },
+  { path: 'slider', component: SliderExampleComponent },
   { path: '', pathMatch: 'full', redirectTo: 'ref_list' }
 ];
 
@@ -61,6 +65,7 @@ const appRoutes: Routes = [
     EmptyStateExampleModule,
     PartsExampleModule,
     JumbotronExampleModule,
+    SliderExampleModule,
 
     RouterModule.forRoot(appRoutes, { useHash: true })
   ],

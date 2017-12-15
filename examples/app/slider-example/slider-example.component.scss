@@ -1,0 +1,9 @@
+:host {
+    pip-slider {
+        height: 128px;
+    }
+
+    ::ng-deep .mat-tab-label {
+        width: 25%;
+    }
+}

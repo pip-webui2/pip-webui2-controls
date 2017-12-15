@@ -1,0 +1,8 @@
+:host {
+    opacity: 0;
+    transition: opacity .35s ease;
+
+    &.show {
+        opacity: 1;
+    }
+}

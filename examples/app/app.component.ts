@@ -42,6 +42,11 @@ export class AppComponent implements AfterViewInit {
       name: 'Jumbotron',
       id: 'jumbotron',
       route: 'jumbotron'
+    },
+    {
+      name: 'Slider',
+      id: 'slider',
+      route: 'slider'
     }
   ];
 
@@ -60,7 +65,6 @@ export class AppComponent implements AfterViewInit {
     "bootbarn-warm-theme": 'Bootbarn Warm',
     "bootbarn-cool-theme": 'Bootbarn Cool',
     "bootbarn-mono-theme": 'Bootbarn Mono'
-
   }
 
   public listIndex: number = 0;
