@@ -91,10 +91,7 @@ export class AppComponent implements AfterViewInit {
 
     router.events.subscribe((url:any) => {
       let index: number;
-      if (!url.url) {
-        this.listIndex = 0;
-        return;
-      }
+      
       if (url.url != this.url) {
         this.url = url.url;
         index = this.list.findIndex((item) => {
