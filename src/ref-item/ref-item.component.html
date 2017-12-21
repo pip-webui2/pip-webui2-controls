@@ -1,4 +1,4 @@
-<mat-list-item (click)="onSelect()">
+<div (click)="onSelect()">
     <div class="pip-pic" matListAvatar *ngIf="img">
         <img matListAvatar [src]="img" [alt]="alt">
     </div>
@@ -13,4 +13,4 @@
     <p matLine class="pip-text" *ngIf="text">
         {{text}}
     </p>
-</mat-list-item>
+</div>
