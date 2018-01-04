@@ -79,3 +79,8 @@ $font-body2 : normal $font-weight-body2 $font-size-body2 $font-family;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+p { 
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
