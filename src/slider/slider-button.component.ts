@@ -1,4 +1,3 @@
-import * as _ from 'lodash';
 import { Renderer, ElementRef, Component, QueryList, OnInit, AfterContentInit, Input, Output, EventEmitter, ContentChildren, Host } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';

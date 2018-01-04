@@ -1,4 +1,3 @@
-import * as _ from 'lodash';
 import { Injectable } from '@angular/core';
 import { Http, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
@@ -8,7 +7,7 @@ import { Part } from './part.model';
 
 @Injectable()
 export class PipPartService {
-    private _parts: Part[];
+    private _parts: Part[] = [];
 
     public constructor() {
         this.resetParts();
@@ -32,7 +31,7 @@ export class PipPartService {
     }
 
     public changeVisibility(name: string, visible: boolean): Part {
-        let index: number = _.findIndex(this._parts, { name: name });
+        let index: number = this._parts.findIndex(element => { return element.name == name; });
         if (index > -1) {
             if (visible != null) this._parts[index].visible.next(visible);
             return this._parts[index];
