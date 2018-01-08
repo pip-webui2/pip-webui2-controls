@@ -71,8 +71,8 @@ emptyStateActions: any[] = [
 
 **Example on the image**
 
-<a href="https://github.com/pip-webui2/pip-webui2-controls/raw/master/doc/images/check-list.png" style="display: block; text-align: center;">
-    <img style="max-width: 300px" src="https://github.com/pip-webui2/pip-webui2-controls/raw/master/doc/images/check-list.png"/>
+<a href="https://github.com/pip-webui2/pip-webui2-controls/raw/master/doc/images/check-item.png" style="display: block; text-align: center;">
+    <img style="max-width: 300px" src="https://github.com/pip-webui2/pip-webui2-controls/raw/master/doc/images/check-item.png"/>
 </a>
 
 
