@@ -78,7 +78,7 @@ emptyStateActions: any[] = [
 
 ### Jumbotron
 
-**Styled information container. Ussualy used to show statistics and other historical information**
+**Styled information container. Usually used to show statistics and other historical information**
 
 **Using**
 
