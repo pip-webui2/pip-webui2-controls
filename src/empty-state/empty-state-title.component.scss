@@ -18,7 +18,7 @@
     align-content: center;
 
     .pip-pic {
-        max-width: 320px !important;
+        max-width: 250px !important;
         width: 80%;
         margin: 25px 25px 0;
         background-position: 50% 50%;
@@ -29,6 +29,8 @@
         max-width: 400px;
         padding-left: 16px;
         padding-right: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
         text-align: center;
         font: normal 400 14px Roboto, "Helvetica Neue", sans-serif;
         opacity: 0.38;
