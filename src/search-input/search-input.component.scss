@@ -1,0 +1,97 @@
+@import '~@angular/material/theming';
+@import '~pip-webui2-themes/src/styles.scss';
+@include mat-core();
+
+@mixin search-input-mixin($theme) {
+    $foreground: map-get($theme, foreground);
+    $background: map-get($theme, background);
+    :host.pip-search-input {
+        color: mat-color($foreground, text) !important;
+        background: invert(mat-color($background, card, 0.054));
+    }
+}
+
+.unicorn-dark-theme {
+    @include search-input-mixin($dark-theme);
+}
+
+.candy-theme {
+    @include search-input-mixin($candy-app-theme);
+}
+
+.pip-blue-theme {
+    @include search-input-mixin($pip-blue-theme);
+}
+
+.pip-grey-theme {
+    @include search-input-mixin($pip-grey-theme);
+}
+
+.pip-navy-theme {
+    @include search-input-mixin($pip-navy-theme);
+}
+
+.pip-amber-theme {
+    @include search-input-mixin($pip-amber-theme);
+}
+
+.pip-green-theme {
+    @include search-input-mixin($pip-green-theme);
+}
+
+.pip-orange-theme {
+    @include search-input-mixin($pip-orange-theme);
+}
+
+.pip-pink-theme {
+    @include search-input-mixin($pip-pink-theme);
+}
+
+.pip-dark-theme {
+    @include search-input-mixin($pip-dark-theme);
+}
+
+.pip-black-theme {
+    @include search-input-mixin($pip-black-theme);
+}
+
+.bootbarn-warm-theme {
+    @include search-input-mixin($bootbarn-warm-theme);
+}
+
+.bootbarn-cool-theme {
+    @include search-input-mixin($bootbarn-cool-theme);
+}
+
+.bootbarn-mono-theme {
+    @include search-input-mixin($bootbarn-mono-theme);
+}
+
+:host {
+    border-radius: 4px;
+    min-height: 56px;
+    width: 100%;
+    display: block;
+    /deep/mat-form-field {
+        width: 100%;
+        height: 56px;
+        .mat-input-wrapper {
+            padding-bottom: 0;
+            height: 100%;
+            .mat-input-flex {
+                height: 100%;
+                .mat-input-infix {
+                    padding-left: 4px;
+                    padding-right: 8px;
+                    border-top: 12px solid transparent;
+                    line-height: 14px;
+                }
+                .mat-form-field-prefix .mat-icon-button, .mat-form-field-suffix .mat-icon-button {
+                    height: 40px;
+                    width: 40px;
+                    font-size: 24px !important;
+                }
+            }
+        }
+    }
+}

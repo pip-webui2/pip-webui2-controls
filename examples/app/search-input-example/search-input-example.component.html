@@ -1,0 +1,18 @@
+<pip-search-input>
+    <mat-form-field>
+        <button matPrefix mat-icon-button>
+            <mat-icon>search</mat-icon>
+        </button>
+
+        <input type="text" matInput [matAutocomplete]="auto">
+        <button matSuffix mat-icon-button>
+            <mat-icon>arrow_drop_down</mat-icon>
+        </button>
+
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of options" [value]="option">
+                {{ option }}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+</pip-search-input>

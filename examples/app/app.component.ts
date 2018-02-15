@@ -47,6 +47,11 @@ export class AppComponent implements AfterViewInit {
       name: 'Slider',
       id: 'slider',
       route: 'slider'
+    },
+    {
+      name: 'Search input',
+      id: 'search_input',
+      route: 'search_input'
     }
   ];
 
