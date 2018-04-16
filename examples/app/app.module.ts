@@ -6,6 +6,7 @@ import { MatToolbarModule, MatSelectModule, MatSidenavModule, MatIconModule,MatB
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { PipThemesModule } from 'pip-webui2-themes';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { AppComponent } from './app.component';
 import { ExampleListModule } from './examples-list/examples-list.module';
@@ -51,6 +52,7 @@ const appRoutes: Routes = [
     AppComponent
   ],
   imports: [
+    TranslateModule.forRoot(),
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -62,6 +64,7 @@ const appRoutes: Routes = [
     MatButtonModule,
     PipThemesModule,
 
+    
     ExampleListModule,
     RefListExampleModule,
     CheckListExampleModule,

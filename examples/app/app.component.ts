@@ -4,6 +4,16 @@ import { ObservableMedia, MediaChange } from "@angular/flex-layout";
 import { Router } from "@angular/router";
 import { PipThemesService, Theme } from 'pip-webui2-themes';
 import { ExmapleListItem } from "./examples-list/shared/examples-list.model";
+import { TranslateService } from '@ngx-translate/core';
+
+export const appTranslations = {
+	en: {
+		'IMPORT_TASKS': 'Import tasks',
+	},
+	ru: {
+		'IMPORT_TASKS': 'Импорт задач',
+	}
+};
 
 @Component({
   selector: 'app-root',
@@ -84,7 +94,12 @@ export class AppComponent implements AfterViewInit {
   public constructor(
     private router: Router,
     private service: PipThemesService,
-		public media: ObservableMedia) {
+    public media: ObservableMedia,	
+    private translate: TranslateService
+	) {
+
+		translate.setTranslation('en', appTranslations.en, true);
+		translate.setTranslation('ru', appTranslations.ru, true);
 
     this.themes = this.service.themes;
     this.theme = this.service.selectedTheme;
