@@ -1,3 +1,3 @@
 <button mat-button class="pip-action" color="accent" *ngFor="let action of actions; let i = index" (click)="onActionClick(action, i)">
-    {{ action.title }}
+    {{ action.title | translate }}
 </button>
