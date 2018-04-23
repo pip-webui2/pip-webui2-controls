@@ -10,6 +10,7 @@ export class PipEmptyStateTitleComponent implements OnInit {
     @Input() imageUrl: string;
     @Input() imageAlt: string;
     @Input() text: string;
+    @Input() subText: string;
 
 	ngOnInit() { }
 }
