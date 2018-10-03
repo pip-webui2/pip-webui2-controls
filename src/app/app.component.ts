@@ -18,7 +18,7 @@ export class AppComponent {
   public selectedTheme: Theme;
   public activeMediaQuery: boolean;
   public mode: string;
-  public app = 'Dates';
+  public app = 'Controls';
   public url: string;
   public langs: string[] = [];
   public selectedLang = 'en';

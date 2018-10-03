@@ -1,6 +1,6 @@
 {
   "name": "pip-webui2-controls-app",
-  "version": "0.0.0",
+  "version": "1.0.0-beta.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -11,7 +11,7 @@
     "e2e": "ng e2e",
     "package": "npm run build:lib && copy .\\LICENSE .\\dist\\pip-webui2-controls && copy .\\README.md .\\dist\\pip-webui2-controls && cd dist/pip-webui2-controls && npm pack"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^6.1.0",
     "@angular/cdk": "^6.4.7",
@@ -27,7 +27,7 @@
     "@angular/router": "^6.1.0",
     "@ngx-translate/core": "^10.0.2",
     "core-js": "^2.5.4",
-    "pip-webui2-themes-temp": "0.0.2",
+    "pip-webui2-themes-temp": "^1.0.0-beta.2",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"
   },

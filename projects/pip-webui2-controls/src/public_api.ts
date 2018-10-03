@@ -3,12 +3,12 @@
  */
 
 // Dummy components
-export * from './lib/ref-item';
-export * from './lib/check-item';
-export * from './lib/color-picker';
-export * from './lib/empty-state';
-export * from './lib/jumbotron';
-export * from './lib/slider';
-export * from './lib/search-input';
+export * from './lib/ref-item/index';
+export * from './lib/check-item/index';
+export * from './lib/color-picker/index';
+export * from './lib/empty-state/index';
+export * from './lib/jumbotron/index';
+export * from './lib/slider/index';
+export * from './lib/search-input/index';
 // Smart components including services
-export * from './lib/part';
+export * from './lib/part/index';
