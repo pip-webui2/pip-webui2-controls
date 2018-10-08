@@ -1,8 +1,8 @@
 import { TemplateRef, ViewContainerRef } from '@angular/core';
+import { Subscription } from 'rxjs';
+
 import { PipPartService } from './part.service';
 import { PipPartComponent } from './part.model';
-
-import { Subscription } from 'rxjs';
 
 export class PipPartNameDirective extends PipPartComponent {
     protected subscription: Subscription;

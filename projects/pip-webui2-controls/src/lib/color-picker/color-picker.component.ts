@@ -1,6 +1,6 @@
 import { Component, QueryList, OnInit, AfterContentInit, Input, Output, EventEmitter, ContentChildren } from '@angular/core';
-import { Observable, BehaviorSubject } from 'rxjs';
 import { MatButton } from '@angular/material';
+import { Observable, BehaviorSubject } from 'rxjs';
 
 const DEFAULT_COLORS = ['purple', 'lightgreen', 'green', 'darkred', 'pink', 'yellow', 'cyan'];
 

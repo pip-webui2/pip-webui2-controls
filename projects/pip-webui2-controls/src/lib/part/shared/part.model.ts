@@ -1,6 +1,5 @@
-import { TemplateRef, ViewContainerRef, Input } from '@angular/core';
-import { BehaviorSubject, Subscription } from 'rxjs';
-import { PipPartService } from './part.service';
+import { TemplateRef, ViewContainerRef } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 export class Part {
     public name: string;

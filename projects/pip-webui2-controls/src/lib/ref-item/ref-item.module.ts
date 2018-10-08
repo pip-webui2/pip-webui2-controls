@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { MatListModule, MatIconModule } from '@angular/material';
 import { CommonModule } from '@angular/common';
+import { MatListModule, MatIconModule } from '@angular/material';
 
 import { PipRefItemComponent } from './ref-item.component';
 
