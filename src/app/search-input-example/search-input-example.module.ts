@@ -9,6 +9,7 @@ import {
   MatTabsModule,
   MatAutocompleteModule
 } from '@angular/material';
+import { TranslateModule } from '@ngx-translate/core';
 import { PipSearchInputModule } from 'pip-webui2-controls';
 
 import { SearchInputExampleComponent } from './search-input-example.component';
@@ -24,6 +25,7 @@ import { SearchInputExampleComponent } from './search-input-example.component';
     MatIconModule,
     MatTabsModule,
     MatAutocompleteModule,
+    TranslateModule,
 
     PipSearchInputModule
   ],

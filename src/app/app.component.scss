@@ -23,14 +23,6 @@ examples-list {
     text-align: end !important;
 }
 
-::ng-deep .mat-form-field-underline {
-    display: none !important;
-}
-
-::ng-deep .mat-input-infix {
-    width: 200px;
-}
-
 .pointer {
     cursor: default;
 }
