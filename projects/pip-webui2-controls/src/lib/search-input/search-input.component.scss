@@ -4,11 +4,15 @@
 @mixin search-input-mixin($theme) {
     $foreground: map-get($theme, foreground);
     $background: map-get($theme, background);
-    :host.pip-search-input {
+    :host {
         color: mat-color($foreground, text) !important;
-        background: invert(mat-color($background, card, 0.04));
-        /deep/ .mat-form-field-prefix {
-            color: mat-color($foreground, text, 0.54) !important;
+        /deep/ mat-form-field {
+            .mat-form-field-wrapper {
+                background: invert(mat-color($background, card, 0.04));
+            }
+            .mat-form-field-prefix {
+                color: mat-color($foreground, text, 0.54) !important;
+            }
         }
     }
 }
@@ -70,13 +74,13 @@
 }
 
 :host {
-    border-radius: 4px;
     min-height: 56px;
     width: 100%;
     display: block;
     /deep/ mat-form-field {
         width: 100%;
         height: 56px;
+        border-radius: 4px;
         .mat-form-field-wrapper {
             padding-bottom: 0;
             height: 100%;
