@@ -1,4 +1,17 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  MatButtonModule,
+  MatInputModule,
+  MatListModule,
+  MatIconModule,
+  MatTabsModule,
+  MatAutocompleteModule
+} from '@angular/material';
+import { TranslateModule } from '@ngx-translate/core';
+import { PipSearchInputModule } from 'pip-webui2-controls';
 
 import { SearchInputExampleComponent } from './search-input-example.component';
 
@@ -8,9 +21,24 @@ describe('SearchInputExampleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SearchInputExampleComponent ]
+      declarations: [SearchInputExampleComponent],
+      imports: [
+        NoopAnimationsModule,
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatButtonModule,
+        MatInputModule,
+        MatListModule,
+        MatIconModule,
+        MatTabsModule,
+        MatAutocompleteModule,
+        TranslateModule.forRoot(),
+
+        PipSearchInputModule
+      ],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

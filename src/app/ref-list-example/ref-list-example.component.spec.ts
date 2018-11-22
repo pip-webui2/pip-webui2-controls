@@ -1,4 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule, MatInputModule, MatListModule, MatToolbarModule } from '@angular/material';
+import { PipRefItemModule } from 'pip-webui2-controls';
 
 import { RefListExampleComponent } from './ref-list-example.component';
 
@@ -8,9 +12,20 @@ describe('RefListExampleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RefListExampleComponent ]
+      declarations: [RefListExampleComponent],
+      imports: [
+        CommonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatButtonModule,
+        MatInputModule,
+        MatListModule,
+        MatToolbarModule,
+
+        PipRefItemModule
+      ],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

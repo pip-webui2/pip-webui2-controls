@@ -25,7 +25,7 @@ import { SearchInputExampleComponent } from './search-input-example.component';
     MatIconModule,
     MatTabsModule,
     MatAutocompleteModule,
-    TranslateModule,
+    TranslateModule.forChild(),
 
     PipSearchInputModule
   ],

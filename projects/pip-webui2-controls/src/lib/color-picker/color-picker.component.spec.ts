@@ -1,25 +1,25 @@
-import { TestBed, inject } from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { TestBed, ComponentFixture } from '@angular/core/testing';
 
 import { PipColorPickerComponent } from './color-picker.component';
 
-describe('a color-picker component', () => {
-	let component: PipColorPickerComponent;
+describe('a pip-color-picker component', () => {
+    let component: PipColorPickerComponent;
+    let fixture: ComponentFixture<PipColorPickerComponent>;
 
-	// register all needed dependencies
-	beforeEach(() => {
-		TestBed.configureTestingModule({
-			providers: [
-				PipColorPickerComponent
-			]
-		});
-	});
+    // register all needed dependencies
+    beforeEach(() => {
+        TestBed.configureTestingModule({
+            declarations: [
+                PipColorPickerComponent
+            ],
+            schemas: [CUSTOM_ELEMENTS_SCHEMA]
+        });
+        fixture = TestBed.createComponent(PipColorPickerComponent);
+        component = fixture.componentInstance;
+    });
 
-	// instantiation through framework injection
-	beforeEach(inject([PipColorPickerComponent], (ColorPickerComponent) => {
-		component = ColorPickerComponent;
-	}));
-
-	it('should have an instance', () => {
-		expect(component).toBeDefined();
-	});
+    it('should have an instance', () => {
+        expect(component).toBeDefined();
+    });
 });
