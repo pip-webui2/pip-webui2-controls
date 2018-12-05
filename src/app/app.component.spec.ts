@@ -34,7 +34,7 @@ describe('AppComponent', () => {
         MatMenuModule,
         TranslateModule.forRoot(),
 
-        PipThemesModule,
+        PipThemesModule.forRoot(),
 
         AppRoutingModule,
         CheckListExampleModule,

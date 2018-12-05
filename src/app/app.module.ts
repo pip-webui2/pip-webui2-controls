@@ -34,7 +34,7 @@ import { SliderExampleModule } from './slider-example/slider-example.module';
     MatMenuModule,
     TranslateModule.forRoot(),
 
-    PipThemesModule,
+    PipThemesModule.forRoot(),
 
     AppRoutingModule,
     CheckListExampleModule,
