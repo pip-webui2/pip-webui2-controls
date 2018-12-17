@@ -100,4 +100,24 @@ Angular 7 minor updates; example update
 No breaking changes in this version
 
 ### Bug Fixes
-No fixes in this version 
+No fixes in this version
+
+## <a name="1.1.2"></a> 1.1.2 (2018-12-17)
+
+Search-input visual fixes
+
+### Features
+* **check-item**: check item
+* **color-picker**: color picker
+* **empty-state**: custom empty state
+* **jumbotron**: visual container
+* **part**: part of anpther components
+* **ref-item**: ref item
+* **search-input**: search input
+* **slider**: slider
+
+### Breaking Changes
+No breaking changes in this version
+
+### Bug Fixes
+Search-input visual fixes
