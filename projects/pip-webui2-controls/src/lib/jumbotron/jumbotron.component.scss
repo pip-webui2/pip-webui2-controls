@@ -1,5 +1,5 @@
 @import '~@angular/material/theming';
-@import '~pip-webui2-themes/styles.scss';
+@import '~pip-webui2-themes/variables';
 @include mat-core();
 @mixin jumbotron-mixin($theme) {
     $foreground: map-get($theme, foreground);

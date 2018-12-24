@@ -1,6 +1,6 @@
 {
   "name": "pip-webui2-controls",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -12,7 +12,7 @@
     "lint": "ng lint",
     "lint:lib": "ng lint pip-webui2-controls",
     "e2e": "ng e2e",
-    "package": "npm run build:lib && copy .\\LICENSE .\\dist\\pip-webui2-controls && copy .\\README.md .\\dist\\pip-webui2-controls && cd dist/pip-webui2-controls && npm pack"
+    "package": "npm run build:lib && (for %I in (LICENSE README.md CHANGELOG.md) do copy .\\%I .\\dist\\pip-webui2-controls) && cd dist/pip-webui2-controls && npm pack"
   },
   "private": false,
   "dependencies": {
@@ -30,7 +30,7 @@
     "@angular/router": "^7.1.1",
     "@ngx-translate/core": "^11.0.1",
     "core-js": "^2.5.4",
-    "pip-webui2-themes": "~1.1.3",
+    "pip-webui2-themes": "~1.1.4",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"
   },

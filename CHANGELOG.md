@@ -121,3 +121,23 @@ No breaking changes in this version
 
 ### Bug Fixes
 Search-input visual fixes
+
+## <a name="1.1.3"></a> 1.1.3 (2018-12-17)
+
+Less size because of themed components
+
+### Features
+* **check-item**: check item
+* **color-picker**: color picker
+* **empty-state**: custom empty state
+* **jumbotron**: visual container
+* **part**: part of anpther components
+* **ref-item**: ref item
+* **search-input**: search input
+* **slider**: slider
+
+### Breaking Changes
+No breaking changes in this version
+
+### Bug Fixes
+* Less size because of themed components
