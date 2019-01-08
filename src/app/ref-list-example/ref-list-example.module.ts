@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatButtonModule, MatInputModule, MatListModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatIconModule, MatInputModule, MatListModule, MatToolbarModule } from '@angular/material';
 import { PipSelectedModule } from 'pip-webui2-behaviors';
 import { PipRefItemModule } from 'pip-webui2-controls';
 
@@ -13,6 +13,7 @@ import { RefListExampleComponent } from './ref-list-example.component';
     FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
+    MatIconModule,
     MatInputModule,
     MatListModule,
     MatToolbarModule,
@@ -20,6 +21,7 @@ import { RefListExampleComponent } from './ref-list-example.component';
     PipRefItemModule,
     PipSelectedModule
   ],
-  declarations: [RefListExampleComponent]
+  declarations: [RefListExampleComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class RefListExampleModule { }

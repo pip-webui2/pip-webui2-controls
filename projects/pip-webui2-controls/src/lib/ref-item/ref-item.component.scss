@@ -1,5 +1,8 @@
 :host {
     display: block;
+    /deep/ pip-ref-item-actions {
+        display: flex;
+    }
 }
 
 .ref-item-overflow {

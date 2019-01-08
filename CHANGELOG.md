@@ -181,3 +181,23 @@ Property `letterSource` provided for `pip-ref-item`
 
 ### Bug Fixes
 No fixes in this version
+
+## <a name="1.1.6"></a> 1.1.6 (2019-01-08)
+
+Actions for `pip-ref-item`
+
+### Features
+* **check-item**: check item
+* **color-picker**: color picker
+* **empty-state**: custom empty state
+* **jumbotron**: visual container
+* **part**: part of anpther components
+* **ref-item**: ref item
+* **search-input**: search input
+* **slider**: slider
+
+### Breaking Changes
+* **pip-ref-item** now could catch content `pip-ref-item-actions` and place at the right side of RefItem
+
+### Bug Fixes
+No fixes in this version

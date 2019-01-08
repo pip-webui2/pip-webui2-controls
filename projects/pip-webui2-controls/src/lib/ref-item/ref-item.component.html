@@ -5,4 +5,5 @@
     <p matLine class="pip-subtitle" *ngIf="subtitle">
         <span>{{subtitle}}</span>
     </p>
+    <ng-content select="pip-ref-item-actions" matSuffix></ng-content>
 </mat-list-item>
