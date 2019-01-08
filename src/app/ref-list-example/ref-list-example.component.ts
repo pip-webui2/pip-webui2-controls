@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class RefListExampleComponent {
 
+  public index = 0;
   public typesOfShoes: any[] = [{
     id: '1',
     title: 'new title',

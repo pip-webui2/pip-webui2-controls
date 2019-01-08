@@ -1,5 +1,5 @@
 <mat-list-item (click)="onSelect()" [ngClass]="{'ref-item-overflow': isOverflow}">
-    <pip-picture matListAvatar resize="false" class="square-s rounded" [src]="img" [letterIcon]="alwaysUppercase ? title && title.toUpperCase() : title"
+    <pip-picture matListAvatar resize="false" class="square-s rounded" [src]="img" [letterIcon]="letterSource"
                  [backgroundColor]="iconBackground" [foregroundColor]="iconForeground"></pip-picture>
     <div matLine class="pip-title" *ngIf="title"> {{title}} </div>
     <p matLine class="pip-subtitle" *ngIf="subtitle">

@@ -2,5 +2,13 @@
 
 <mat-nav-list>
   <pip-ref-item *ngFor="let shoe of typesOfShoes" [id]="shoe.id" [title]="shoe.title" [subtitle]="shoe.subtitle" [img]="shoe.img"
-                (select)="select($event)" alwaysUppercase="true" [isOverflow]="shoe.isOverflow"></pip-ref-item>
+                (select)="select($event)" [isOverflow]="shoe.isOverflow" [letterSource]="shoe.title && shoe.title.toUpperCase()"></pip-ref-item>
 </mat-nav-list>
+
+<p> They can also be selected.</p>
+<pip-selected (onSelect)="index = $event" [index]="index">
+  <mat-nav-list>
+    <pip-ref-item pipSelectable *ngFor="let shoe of typesOfShoes" [id]="shoe.id" [title]="shoe.title" [subtitle]="shoe.subtitle"
+                  [img]="shoe.img" (select)="select($event)" [isOverflow]="shoe.isOverflow" [letterSource]="shoe.subtitle && shoe.subtitle.toUpperCase()"></pip-ref-item>
+  </mat-nav-list>
+</pip-selected>
