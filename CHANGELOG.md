@@ -141,3 +141,23 @@ No breaking changes in this version
 
 ### Bug Fixes
 * Less size because of themed components
+
+## <a name="1.1.4"></a> 1.1.4 (2019-01-08)
+
+New `pip-ref-item`
+
+### Features
+* **check-item**: check item
+* **color-picker**: color picker
+* **empty-state**: custom empty state
+* **jumbotron**: visual container
+* **part**: part of anpther components
+* **ref-item**: ref item
+* **search-input**: search input
+* **slider**: slider
+
+### Breaking Changes
+* `pip-ref-item` now have different properties
+
+### Bug Fixes
+No fixes in this version

@@ -1,4 +1,5 @@
 @import '~pip-webui2-themes/variables';
+
 @mixin search-input-mixin($theme) {
     $foreground: map-get($theme, foreground);
     $background: map-get($theme, background);
@@ -15,60 +16,10 @@
     }
 }
 
-.unicorn-dark-theme {
-    @include search-input-mixin($dark-theme);
-}
-
-.candy-theme {
-    @include search-input-mixin($candy-app-theme);
-}
-
-.pip-blue-theme {
-    @include search-input-mixin($pip-blue-theme);
-}
-
-.pip-grey-theme {
-    @include search-input-mixin($pip-grey-theme);
-}
-
-.pip-navy-theme {
-    @include search-input-mixin($pip-navy-theme);
-}
-
-.pip-amber-theme {
-    @include search-input-mixin($pip-amber-theme);
-}
-
-.pip-green-theme {
-    @include search-input-mixin($pip-green-theme);
-}
-
-.pip-orange-theme {
-    @include search-input-mixin($pip-orange-theme);
-}
-
-.pip-pink-theme {
-    @include search-input-mixin($pip-pink-theme);
-}
-
-.pip-dark-theme {
-    @include search-input-mixin($pip-dark-theme);
-}
-
-.pip-black-theme {
-    @include search-input-mixin($pip-black-theme);
-}
-
-.bootbarn-warm-theme {
-    @include search-input-mixin($bootbarn-warm-theme);
-}
-
-.bootbarn-cool-theme {
-    @include search-input-mixin($bootbarn-cool-theme);
-}
-
-.bootbarn-mono-theme {
-    @include search-input-mixin($bootbarn-mono-theme);
+@each $class, $theme in $themes {
+    .#{$class} {
+        @include search-input-mixin($theme);
+    }
 }
 
 :host {

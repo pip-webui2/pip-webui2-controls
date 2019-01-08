@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatListModule, MatIconModule } from '@angular/material';
-import { PipPictureModule } from 'pip-webui2-pictures';
 
 import { PipRefItemComponent } from './ref-item.component';
 
@@ -13,7 +12,6 @@ import { PipRefItemComponent } from './ref-item.component';
     MatListModule,
     MatIconModule,
     CommonModule,
-    PipPictureModule,
   ],
   exports: [
     PipRefItemComponent

@@ -1,16 +1,8 @@
-<div (click)="onSelect()">
-    <div class="pip-pic" matListAvatar *ngIf="img">
-        <img matListAvatar [src]="img" [alt]="alt">
-    </div>
-    <div matLine class="pip-title text-overflow" *ngIf="title"> {{title}} </div>
-    <p matLine class="pip-subtitle text-overflow" *ngIf="subtitle">
-        <mat-icon class="pip-icon" *ngIf="subtitleIcon"> {{subtitleIcon}} </mat-icon>
-        <span>{{subtitle}} </span>
+<mat-list-item (click)="onSelect()" [ngClass]="{'ref-item-overflow': isOverflow}">
+    <pip-picture matListAvatar resize="false" class="square-s rounded" [src]="img" [letterIcon]="alwaysUppercase ? title && title.toUpperCase() : title"
+                 [backgroundColor]="iconBackground" [foregroundColor]="iconForeground"></pip-picture>
+    <div matLine class="pip-title" *ngIf="title"> {{title}} </div>
+    <p matLine class="pip-subtitle" *ngIf="subtitle">
+        <span>{{subtitle}}</span>
     </p>
-    <p matLine class="pip-text-bold text-overflow" *ngIf="textBold">
-        {{textBold}}
-    </p>
-    <p matLine class="pip-text" *ngIf="text">
-        {{text}}
-    </p>
-</div>
+</mat-list-item>

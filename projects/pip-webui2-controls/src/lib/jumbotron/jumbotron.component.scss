@@ -1,6 +1,5 @@
-@import '~@angular/material/theming';
 @import '~pip-webui2-themes/variables';
-@include mat-core();
+
 @mixin jumbotron-mixin($theme) {
     $foreground: map-get($theme, foreground);
     $background: map-get($theme, background);
@@ -14,60 +13,10 @@
     }
 }
 
-.unicorn-dark-theme {
-    @include jumbotron-mixin($dark-theme);
-}
-
-.candy-theme {
-    @include jumbotron-mixin($candy-app-theme);
-}
-
-.pip-blue-theme {
-    @include jumbotron-mixin($pip-blue-theme);
-}
-
-.pip-grey-theme {
-    @include jumbotron-mixin($pip-grey-theme);
-}
-
-.pip-navy-theme {
-    @include jumbotron-mixin($pip-navy-theme);
-}
-
-.pip-amber-theme {
-    @include jumbotron-mixin($pip-amber-theme);
-}
-
-.pip-green-theme {
-    @include jumbotron-mixin($pip-green-theme);
-}
-
-.pip-orange-theme {
-    @include jumbotron-mixin($pip-orange-theme);
-}
-
-.pip-pink-theme {
-    @include jumbotron-mixin($pip-pink-theme);
-}
-
-.pip-dark-theme {
-    @include jumbotron-mixin($pip-dark-theme);
-}
-
-.pip-black-theme {
-    @include jumbotron-mixin($pip-black-theme);
-}
-
-.bootbarn-warm-theme {
-    @include jumbotron-mixin($bootbarn-warm-theme);
-}
-
-.bootbarn-cool-theme {
-    @include jumbotron-mixin($bootbarn-cool-theme);
-}
-
-.bootbarn-mono-theme {
-    @include jumbotron-mixin($bootbarn-mono-theme);
+@each $class, $theme in $themes {
+    .#{$class} {
+        @include jumbotron-mixin($theme);
+    }
 }
 
 $jumbotron-padding: 24px;
