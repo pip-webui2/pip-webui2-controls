@@ -9,7 +9,7 @@ Initial release with some components
 * **color-picker**: color picker
 * **empty-state**: custom empty state
 * **jumbotron**: visual container
-* **part**: part of anpther components
+* **part**: part of another components
 * **ref-item**: ref item
 * **search-input**: search input
 * **slider**: slider
@@ -29,7 +29,7 @@ Update to Angular 6
 * **color-picker**: color picker
 * **empty-state**: custom empty state
 * **jumbotron**: visual container
-* **part**: part of anpther components
+* **part**: part of another components
 * **ref-item**: ref item
 * **search-input**: search input
 * **slider**: slider
@@ -49,7 +49,7 @@ Update to Angular 6
 * **color-picker**: color picker
 * **empty-state**: custom empty state
 * **jumbotron**: visual container
-* **part**: part of anpther components
+* **part**: part of another components
 * **ref-item**: ref item
 * **search-input**: search input
 * **slider**: slider
@@ -69,7 +69,7 @@ Update to stable Angular 7 and fix the tests.
 * **color-picker**: color picker
 * **empty-state**: custom empty state
 * **jumbotron**: visual container
-* **part**: part of anpther components
+* **part**: part of another components
 * **ref-item**: ref item
 * **search-input**: search input
 * **slider**: slider
@@ -91,7 +91,7 @@ Angular 7 minor updates; example update
 * **color-picker**: color picker
 * **empty-state**: custom empty state
 * **jumbotron**: visual container
-* **part**: part of anpther components
+* **part**: part of another components
 * **ref-item**: ref item
 * **search-input**: search input
 * **slider**: slider
@@ -111,7 +111,7 @@ Search-input visual fixes
 * **color-picker**: color picker
 * **empty-state**: custom empty state
 * **jumbotron**: visual container
-* **part**: part of anpther components
+* **part**: part of another components
 * **ref-item**: ref item
 * **search-input**: search input
 * **slider**: slider
@@ -131,7 +131,7 @@ Less size because of themed components
 * **color-picker**: color picker
 * **empty-state**: custom empty state
 * **jumbotron**: visual container
-* **part**: part of anpther components
+* **part**: part of another components
 * **ref-item**: ref item
 * **search-input**: search input
 * **slider**: slider
@@ -151,7 +151,7 @@ New `pip-ref-item`
 * **color-picker**: color picker
 * **empty-state**: custom empty state
 * **jumbotron**: visual container
-* **part**: part of anpther components
+* **part**: part of another components
 * **ref-item**: ref item
 * **search-input**: search input
 * **slider**: slider
@@ -171,7 +171,7 @@ Property `letterSource` provided for `pip-ref-item`
 * **color-picker**: color picker
 * **empty-state**: custom empty state
 * **jumbotron**: visual container
-* **part**: part of anpther components
+* **part**: part of another components
 * **ref-item**: ref item
 * **search-input**: search input
 * **slider**: slider
@@ -191,13 +191,33 @@ Actions for `pip-ref-item`
 * **color-picker**: color picker
 * **empty-state**: custom empty state
 * **jumbotron**: visual container
-* **part**: part of anpther components
+* **part**: part of another components
 * **ref-item**: ref item
 * **search-input**: search input
 * **slider**: slider
 
 ### Breaking Changes
 * **pip-ref-item** now could catch content `pip-ref-item-actions` and place at the right side of RefItem
+
+### Bug Fixes
+No fixes in this version
+
+## <a name="1.1.7"></a> 1.1.7 (2019-01-22)
+
+Update for new themes
+
+### Features
+* **check-item**: check item
+* **color-picker**: color picker
+* **empty-state**: custom empty state
+* **jumbotron**: visual container
+* **part**: part of another components
+* **ref-item**: ref item
+* **search-input**: search input
+* **slider**: slider
+
+### Breaking Changes
+No breaking changes in this version
 
 ### Bug Fixes
 No fixes in this version

@@ -19,7 +19,7 @@ const appRoutes: Routes = [
     { path: 'jumbotron', component: JumbotronExampleComponent },
     { path: 'slider', component: SliderExampleComponent },
     { path: 'search_input', component: SearchInputExampleComponent },
-    { path: '', pathMatch: 'full', redirectTo: 'ref_list' }
+    { path: '**', redirectTo: 'ref_list' }
 ];
 
 @NgModule({
