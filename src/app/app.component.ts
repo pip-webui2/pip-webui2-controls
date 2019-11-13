@@ -38,11 +38,12 @@ export class AppComponent {
     'bootbarn-warm-theme': 'Bootbarn Warm',
     'bootbarn-cool-theme': 'Bootbarn Cool',
     'bootbarn-mono-theme': 'Bootbarn Mono',
-    'mst-black-theme': 'MST Dark',
-    'mst-black-dark-theme': 'MST Dark Black',
+    'mst-black-theme': 'MST Black',
+    'mst-black-dark-theme': 'MST Black Dark',
     'mst-mono-theme': 'MST Mono',
     'mst-orange-theme': 'MST Orange',
-    'mst-orange-dark-theme': 'MST Orange Black',
+    'mst-orange-dark-theme': 'MST Orange Dark',
+    'mst-elegant-theme': 'MST Elegant'
   };
 
   public list: ExmapleListItem[] = [

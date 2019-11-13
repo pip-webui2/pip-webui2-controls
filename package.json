@@ -1,6 +1,6 @@
 {
   "name": "pip-webui2-controls",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -31,9 +31,9 @@
     "@angular/router": "^7.1.1",
     "@ngx-translate/core": "^11.0.1",
     "core-js": "^2.5.4",
-    "pip-webui2-behaviors": "^1.1.18",
-    "pip-webui2-pictures": "^1.1.7",
-    "pip-webui2-themes": "^1.1.16",
+    "pip-webui2-behaviors": "^1.1.20",
+    "pip-webui2-pictures": "^1.1.10",
+    "pip-webui2-themes": "^1.1.17",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"
   },
