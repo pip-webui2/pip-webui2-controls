@@ -6,8 +6,8 @@
     :host.pip-jumbotron {
         color: mat-color($foreground, text) !important;
         background: mat-color($background, card);
-        /deep/.pip-jumbo-title-content,
-        /deep/.pip-jumbo-item {
+        ::ng-deep.pip-jumbo-title-content,
+        ::ng-deep.pip-jumbo-item {
             border-bottom-color: mat-color($foreground, divider);
         }
     }

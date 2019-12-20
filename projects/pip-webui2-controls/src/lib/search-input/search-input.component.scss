@@ -6,7 +6,7 @@
     $isDark: map-get($theme, is-dark);
     :host {
         color: mat-color($foreground, text) !important;
-        /deep/ mat-form-field {
+        ::ng-deep mat-form-field {
             @if $isDark==true {
                 .mat-form-field-flex {
                     background: darken(mat-color($foreground, 'base'), 86%);
@@ -45,7 +45,7 @@
     min-height: 48px;
     width: 100%;
     display: block;
-    /deep/ mat-form-field {
+    ::ng-deep mat-form-field {
         width: 100%;
         box-sizing: border-box;
         .mat-form-field-wrapper {

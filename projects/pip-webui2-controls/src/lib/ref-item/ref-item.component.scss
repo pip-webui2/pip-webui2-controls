@@ -1,7 +1,7 @@
 :host {
     display: block;
     cursor: pointer;
-    /deep/ pip-ref-item-actions {
+    ::ng-deep pip-ref-item-actions {
         display: flex;
     }
 }
@@ -13,7 +13,7 @@
         white-space: normal !important;
         text-overflow: unset;
     }
-    /deep/ .mat-list-item-content {
+    ::ng-deep .mat-list-item-content {
         padding-top: 8px;
         padding-bottom: 8px;
     }
