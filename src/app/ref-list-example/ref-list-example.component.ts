@@ -53,12 +53,16 @@ export class RefListExampleComponent {
     }
 
     public onClick(): void {
-        console.log('onClick')
+        console.log('onClick');
     }
 
     public onDelete($event): void {
-        console.log('onDelete', $event)
-        $event.stopPropagation()
+        console.log('onDelete', $event);
+        $event.stopPropagation();
+    }
+
+    public trackById(item: object & {id: string}): string {
+        return item && item.id;
     }
 
 }

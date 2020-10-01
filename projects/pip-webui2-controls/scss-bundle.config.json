@@ -1,0 +1,7 @@
+{
+    "bundlerOptions": {
+        "entryFile": "projects/pip-webui2-controls/src/lib/styles.scss",
+        "outFile": "dist/pip-webui2-controls/styles.scss",
+        "ignoredImports": ["^~", "node_modules"]
+    }
+}

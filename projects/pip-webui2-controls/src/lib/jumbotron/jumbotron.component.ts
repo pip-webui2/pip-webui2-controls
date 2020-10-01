@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, Renderer2 } from '@angular/core';
 
 @Component({
     selector: 'pip-jumbotron',
@@ -9,9 +9,9 @@ export class PipJumbotronComponent implements OnInit {
     ngOnInit() { }
 
     constructor(
-        private renderer: Renderer,
+        private renderer: Renderer2,
         private elRef: ElementRef
     ) {
-        renderer.setElementClass(elRef.nativeElement, 'pip-jumbotron', true);
+        renderer.addClass(elRef.nativeElement, 'pip-jumbotron');
     }
 }

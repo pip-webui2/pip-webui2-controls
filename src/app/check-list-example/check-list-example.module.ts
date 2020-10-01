@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatListModule } from '@angular/material';
+import { MatListModule } from '@angular/material/list';
 import { PipCheckItemModule } from 'pip-webui2-controls';
 
 import { CheckListExampleComponent } from './check-list-example.component';

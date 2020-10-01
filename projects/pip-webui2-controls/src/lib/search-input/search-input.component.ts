@@ -1,4 +1,4 @@
-import { Component, Renderer, ElementRef } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
     selector: 'pip-search-input',
@@ -9,13 +9,7 @@ export class PipSearchInputComponent {
 
     public isFirst = true;
     public isLast = false;
-    private _refreshIntervalId: any = null;
-    private _autoSlide = true;
+    @HostBinding('class.pip-search-input') get classPipSearchInput() { return true; }
 
-    constructor(
-        private renderer: Renderer,
-        private elRef: ElementRef
-    ) {
-        renderer.setElementClass(elRef.nativeElement, 'pip-search-input', true);
-    }
+    constructor(    ) {    }
 }

@@ -1,24 +1,3 @@
-@import '~pip-webui2-themes/variables';
-
-@mixin jumbotron-mixin($theme) {
-    $foreground: map-get($theme, foreground);
-    $background: map-get($theme, background);
-    :host.pip-jumbotron {
-        color: mat-color($foreground, text) !important;
-        background: mat-color($background, card);
-        ::ng-deep.pip-jumbo-title-content,
-        ::ng-deep.pip-jumbo-item {
-            border-bottom-color: mat-color($foreground, divider);
-        }
-    }
-}
-
-@each $class, $theme in $themes {
-    .#{$class} {
-        @include jumbotron-mixin($theme);
-    }
-}
-
 $jumbotron-padding: 24px;
 $jumbotron-color: rgba(0, 0, 0, .87);
 $jumbotron-bg: rgba(0, 0, 0, 0.08);

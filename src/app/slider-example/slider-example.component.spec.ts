@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTabsModule } from '@angular/material';
+import { MatTabsModule } from '@angular/material/tabs';
 import { PipSliderModule } from 'pip-webui2-controls';
 
 import { SliderExampleComponent } from './slider-example.component';

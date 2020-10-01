@@ -1,8 +1,12 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatButtonModule, MatIconModule, MatInputModule, MatListModule, MatToolbarModule } from '@angular/material';
-import { PipSelectedModule } from 'pip-webui2-behaviors';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { PipSelectableModule } from 'pip-webui2-behaviors';
 import { PipRefItemModule } from 'pip-webui2-controls';
 
 import { RefListExampleComponent } from './ref-list-example.component';
@@ -19,7 +23,7 @@ import { RefListExampleComponent } from './ref-list-example.component';
     MatToolbarModule,
 
     PipRefItemModule,
-    PipSelectedModule
+    PipSelectableModule
   ],
   declarations: [RefListExampleComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

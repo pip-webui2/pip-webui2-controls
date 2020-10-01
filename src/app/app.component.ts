@@ -1,51 +1,34 @@
-import { Component, ViewChild } from '@angular/core';
-import { MediaObserver, MediaChange } from '@angular/flex-layout';
-import { MatSidenav } from '@angular/material';
+import { Component, OnDestroy, ViewChild } from '@angular/core';
+import { MediaObserver } from '@angular/flex-layout';
+import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { PipThemesService, Theme } from 'pip-webui2-themes';
-
+import { Observable, Subscription } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { AppTranslations } from './app.strings';
 import { ExmapleListItem } from './examples-list/shared/ExampleListItem';
+import { combineLatestMap } from './utils';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnDestroy {
+  private subs = new Subscription();
+
   public themes: Theme[];
-  public selectedTheme: Theme;
-  public activeMediaQuery: boolean;
-  public mode: string;
+  public theme: Theme;
+  public languages = ['en', 'ru'];
+  public language: string;
+
+  public ctx$: Observable<{
+    activeMediaQuery: boolean
+  }>;
+
   public app = 'Controls';
   public url: string;
-  public langs: string[] = [];
-  public selectedLang = 'en';
-
-  public themesLocalNames: any = {
-    'candy-theme': 'Candy',
-    'unicorn-dark-theme': 'Unicorn Dark',
-    'pip-blue-theme': 'Blue',
-    'pip-grey-theme': 'Grey',
-    'pip-pink-theme': 'Pink',
-    'pip-green-theme': 'Green',
-    'pip-navy-theme': 'Navy',
-    'pip-amber-theme': 'Amber',
-    'pip-orange-theme': 'Orange',
-    'pip-dark-theme': 'Dark',
-    'pip-black-theme': 'Black',
-    'bootbarn-warm-theme': 'Bootbarn Warm',
-    'bootbarn-cool-theme': 'Bootbarn Cool',
-    'bootbarn-mono-theme': 'Bootbarn Mono',
-    'mst-black-theme': 'MST Black',
-    'mst-black-dark-theme': 'MST Black Dark',
-    'mst-mono-theme': 'MST Mono',
-    'mst-orange-theme': 'MST Orange',
-    'mst-orange-dark-theme': 'MST Orange Dark',
-    'mst-elegant-theme': 'MST Elegant'
-  };
-
   public list: ExmapleListItem[] = [
     {
       name: 'Reference list',
@@ -97,21 +80,22 @@ export class AppComponent {
     public media: MediaObserver,
     private translate: TranslateService
   ) {
-    this.selectedTheme = this.themeService.selectedTheme;
-    this.themes = this.themeService.themes;
+    this.themes = this.themeService.themesArray;
+    this.theme = this.themeService.currentTheme;
 
-    translate.setDefaultLang(this.selectedLang);
-    translate.use(this.selectedLang);
-    this.langs = translate.getLangs();
-    this.translate.setTranslation('en', AppTranslations.en, true);
-    this.translate.setTranslation('ru', AppTranslations.ru, true);
+    this.translate.addLangs(this.languages);
+    Object.entries(AppTranslations).forEach(e => this.translate.setTranslation(e[0], e[1], true));
+    this.translate.setDefaultLang('en');
 
-    this.media.media$.subscribe((change: MediaChange) => {
-      this.activeMediaQuery = change && change.mqAlias === 'xs' ? true : false;
-      this.mode = change && change.mqAlias === 'xs' ? null : 'side';
+    const browserLang = translate.getBrowserLang();
+    this.translate.use(browserLang.match(/en|ru/) ? browserLang : 'en');
+    this.language = this.translate.currentLang;
+
+    this.ctx$ = combineLatestMap({
+      activeMediaQuery: media.asObservable().pipe((map(changes => changes && changes.some(c => c.mqAlias === 'xs'))))
     });
 
-    router.events.subscribe((url: any) => {
+    this.subs.add(router.events.subscribe((url: any) => {
 
       if (url.url && url.url !== this.url) {
         this.url = url.url;
@@ -121,8 +105,12 @@ export class AppComponent {
 
         this.listIndex = this.listIndex < 0 ? 0 : this.listIndex;
       }
-    });
+    }));
 
+  }
+
+  ngOnDestroy(): void {
+    this.subs.unsubscribe();
   }
 
   public onListItemIndexChanged(index: number) {
@@ -131,13 +119,13 @@ export class AppComponent {
     this.sidenav.close();
   }
 
-  public changeTheme(theme) {
-    this.selectedTheme = theme;
-    this.themeService.selectedTheme = theme;
+  public changeTheme(theme: Theme) {
+    this.theme = theme;
+    this.themeService.selectTheme(theme.name);
   }
 
-  public changeLanguage(lang) {
-    this.selectedLang = lang;
-    this.translate.use(lang);
+  public changeLanguage(language: string) {
+    this.language = language;
+    this.translate.use(language);
   }
 }

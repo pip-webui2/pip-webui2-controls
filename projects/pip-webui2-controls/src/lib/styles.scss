@@ -1,0 +1,7 @@
+@import 'jumbotron/jumbotron.component.mixin.scss';
+@import 'search-input/search-input.component.mixin.scss';
+
+@mixin pip-webui2-controls-mixin($theme) {
+    @include pip-jumbotron-mixin($theme);
+    @include pip-search-input-mixin($theme);
+}

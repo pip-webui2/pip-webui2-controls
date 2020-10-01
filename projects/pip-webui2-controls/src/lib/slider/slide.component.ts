@@ -1,4 +1,4 @@
-import { Component, Renderer, ElementRef, OnInit, AfterContentInit } from '@angular/core';
+import { Component, ElementRef, OnInit, AfterContentInit, Renderer2 } from '@angular/core';
 
 @Component({
     selector: 'pip-slide',
@@ -9,10 +9,10 @@ export class PipSlideComponent implements OnInit, AfterContentInit {
     ngOnInit() { }
 
     constructor(
-        private renderer: Renderer,
+        private renderer: Renderer2,
         private elRef: ElementRef
     ) {
-        this.renderer.setElementClass(this.elRef.nativeElement, 'pip-slide', true);
+        this.renderer.addClass(this.elRef.nativeElement, 'pip-slide');
     }
 
     ngAfterContentInit() {

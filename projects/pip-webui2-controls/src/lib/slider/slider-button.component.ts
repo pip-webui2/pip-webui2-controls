@@ -1,4 +1,4 @@
-import { Renderer, ElementRef, Component, OnInit, Input, Host } from '@angular/core';
+import { ElementRef, Component, OnInit, Input, Host, Renderer2 } from '@angular/core';
 import { PipSliderComponent } from './slider.component';
 
 @Component({
@@ -12,11 +12,11 @@ export class PipSliderButtonComponent implements OnInit {
         if (direction === 'forward') {
             this.icon = 'chevron_right';
             this.elRef.nativeElement.classList.remove('backward');
-            this.renderer.setElementClass(this.elRef.nativeElement, 'forward', true);
+            this.renderer.addClass(this.elRef.nativeElement, 'forward');
         } else {
             this.icon = 'chevron_left';
             this.elRef.nativeElement.classList.remove('forward');
-            this.renderer.setElementClass(this.elRef.nativeElement, 'backward', true);
+            this.renderer.addClass(this.elRef.nativeElement, 'backward');
         }
     }
     @Input() disabled = false;
@@ -27,11 +27,11 @@ export class PipSliderButtonComponent implements OnInit {
     private parentSlider: PipSliderComponent = null;
 
     constructor(
-        private renderer: Renderer,
+        private renderer: Renderer2,
         private elRef: ElementRef,
         @Host() pSlider: PipSliderComponent
     ) {
-        this.renderer.setElementClass(this.elRef.nativeElement, 'forward', true);
+        this.renderer.addClass(this.elRef.nativeElement, 'forward');
         if (pSlider instanceof PipSliderComponent) { this.parentSlider = pSlider; }
     }
 
